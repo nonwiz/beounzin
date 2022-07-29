@@ -4,7 +4,7 @@ import { Button, Collapse, Container, Image, Radio, Text, useTheme } from '@next
 export default function Garage() {
   return (
     <div className='flex'>
-      <div className="w-96">
+      <div className="mt-2 w-100 md:w-96 md:mt-0">
         <Text weight="bold" blockquote>Garage</Text>
         <Collapse.Group className="mt-2">
 

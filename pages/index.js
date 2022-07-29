@@ -15,6 +15,7 @@ import useMedia from '@/components/useMedia';
 export default function Home() {
   const [isMd, setIsMd] = useState(false);
   const [navi, selectNavi] = useState('lobby');
+
   const content = {
     'lobby': <Lobby />,
     'garage': <Garage />,
@@ -40,7 +41,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container sm>
-        <main className={isMd ? "pt-40" : "pt-10"}>
+        <main className={`${isMd ? "pt-40" : "pt-10"}`}>
           <Grid.Container gap={1} justify="space-between" wrap="wrap-reverse">
             <Grid>
               {content[navi]}
