@@ -1,7 +1,8 @@
 
 import { Button, Card, Row, Col, Image, Radio, Text, useTheme } from '@nextui-org/react'
+import Link from 'next/link';
 
-export default function CardGrid({ width, height, bg }) {
+export default function CardGrid({ width, height, bg, demo, description, category, subcategory }) {
 
   return (
     <Card css={{ w: width, h: height }}>
@@ -9,10 +10,10 @@ export default function CardGrid({ width, height, bg }) {
         <Col>
           <div className="bg-gray-800 opacity-75 w-40 p-1 rounded-xl">
             <Text size={12} weight="bold" transform="uppercase" color="#9E9E9E">
-              Category
+              {category}
             </Text>
             <Text h3 color="white">
-              Subcategory
+              {subcategory}
             </Text>
           </div>
         </Col>
@@ -23,7 +24,7 @@ export default function CardGrid({ width, height, bg }) {
           objectFit="cover"
           width="100%"
           height="100%"
-          alt="Relaxing app background"
+          alt="Background pic"
         />
       </Card.Body>
       <Card.Footer
@@ -41,7 +42,7 @@ export default function CardGrid({ width, height, bg }) {
             <Row>
               <Col>
                 <Text color="white" size={12}>
-                  Description of Item
+                  {description}
                 </Text>
               </Col>
             </Row>
@@ -60,7 +61,9 @@ export default function CardGrid({ width, height, bg }) {
                   weight="bold"
                   transform="uppercase"
                 >
-                  Read more
+                  <Link href={demo}>
+                    Open
+                  </Link>
                 </Text>
               </Button>
             </Row>
