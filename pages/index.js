@@ -47,8 +47,8 @@ export default function Home() {
               {content[navi]}
             </Grid>
 
-            <Grid>
-              <div className={`flex flex-col ${isMd ? 'px-10' : 'px-1'}`}>
+            <Grid xs={2}>
+              <div className={`flex flex-col -mx-4 md:mx-2 ${isMd ? 'px-10' : 'px-0'}`}>
                 <Radio.Group label="Navigation"
                   orientation={isMd ? "vertical" : "horizontal"}
                   defaultValue="lobby"
@@ -57,10 +57,10 @@ export default function Home() {
                   color="primary"
                   labelColor="black"
                 >
-                  <Radio value="lobby" size={isMd ? "md" : "sm"}>LOBBY</Radio>
-                  <Radio value="garage" size={isMd ? "md" : "sm"}>GARAGE</Radio>
-                  <Radio value="collection" size={isMd ? "md" : "sm"}>COLLECTION</Radio>
-                  <Radio value="contact" size={isMd ? "md" : "sm"}>CONTACT</Radio>
+                  <Radio value="lobby" size={isMd ? "md" : "xs"}>LOBBY</Radio>
+                  <Radio value="garage" size={isMd ? "md" : "xs"}>GARAGE</Radio>
+                  <Radio value="collection" size={isMd ? "md" : "xs"}>COLLECTION</Radio>
+                  <Radio value="contact" size={isMd ? "md" : "xs"}>CONTACT</Radio>
                 </Radio.Group>
               </div>
             </Grid>

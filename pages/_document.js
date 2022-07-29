@@ -13,7 +13,12 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>{CssBaseline.flush()}</Head>
+        <Head>
+          {CssBaseline.flush()}
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        </Head>
         <body>
           <Main />
           <NextScript />
