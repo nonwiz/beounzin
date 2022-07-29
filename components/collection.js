@@ -65,9 +65,9 @@ export default function Garage() {
 
 
   return (
-    <div className='my-2 flex md:-my-40 md:-mx-40 '>
+    <div className='my-2 flex lg:-my-40 lg:-mx-40 '>
       <div className="md:w-[800px]">
-        <div className="p-2">
+        <div className="p-4 md:p-2">
           <Grid.Container gap={2} justify="center">
             {collection.map((item, index) =>
               <Grid key={index} xs={item.xs}>
