@@ -20,7 +20,7 @@ export default function Contact() {
             </Popover.Trigger>
             <Popover.Content>
               <div className="p-4 flex flex-col">
-                {menuItems.map(item => <a href={item.key} className="hover:underline"> {item.name} </a>)}
+                {menuItems.map(item => <a href={item.key} key={item.key} className="hover:underline"> {item.name} </a>)}
               </div>
             </Popover.Content>
           </Popover>
