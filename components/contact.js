@@ -16,7 +16,7 @@ export default function Contact() {
         <div className="-mx-4 mt-2">
           <Popover isBordered disableShadow placement="right">
             <Popover.Trigger>
-              <Button auto animated={false} flat color="primary"><Text>Connect me</Text></Button>
+              <Button auto animated={false} flat color="primary"><Text className="hover:underline">Connect me</Text></Button>
             </Popover.Trigger>
             <Popover.Content>
               <div className="p-4 flex flex-col">
