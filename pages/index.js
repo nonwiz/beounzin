@@ -6,15 +6,14 @@ import Lobby from "../components/lobby";
 import Garage from "../components/garage";
 import Contact from "../components/contact";
 import Collection from "../components/collection";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useMedia from '@/components/useMedia';
 
 
 
 
 export default function Home() {
-  const isMd = useMedia('(min-width: 768px)')
-
+  const [isMd, setIsMd] = useState(false);
   const [navi, selectNavi] = useState('lobby');
   const content = {
     'lobby': <Lobby />,
@@ -23,6 +22,15 @@ export default function Home() {
     'collection': <Collection />
 
   }
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const matchMd = window.matchMedia("(min-width: 700px)")
+      setIsMd(matchMd.matches);
+    }
+
+
+  })
 
   return (
     <div>
